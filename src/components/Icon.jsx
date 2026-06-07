@@ -30,6 +30,48 @@ function Icon({ name, className = "" }) {
     );
   }
 
+  // ไอคอนซองจดหมายสำหรับอีเมลติดต่อ
+  if (name === "email") {
+    return (
+      <svg viewBox="0 0 24 24" className={classes} aria-hidden="true">
+        <rect
+          x="4"
+          y="6"
+          width="16"
+          height="12"
+          rx="2.2"
+          fill="none"
+          stroke="currentColor"
+          strokeWidth="1.4"
+        />
+        <path
+          d="m5.8 7.8 5.35 4.37a1.35 1.35 0 0 0 1.7 0L18.2 7.8"
+          fill="none"
+          stroke="currentColor"
+          strokeWidth="1.4"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+        />
+      </svg>
+    );
+  }
+
+  // ไอคอนโทรศัพท์สำหรับกดโทรจากมือถือได้ทันที
+  if (name === "phone") {
+    return (
+      <svg viewBox="0 0 24 24" className={classes} aria-hidden="true">
+        <path
+          d="M8.3 4.8c.45-.46 1.2-.5 1.7-.1l1.54 1.26c.53.43.67 1.18.33 1.78l-.9 1.62a1 1 0 0 0 .08 1.07 15.2 15.2 0 0 0 2.44 2.95 1 1 0 0 0 1.08.18l1.76-.66c.64-.24 1.36 0 1.72.56l1.02 1.62c.34.54.25 1.26-.2 1.7l-1.1 1.08c-.7.68-1.74.93-2.67.62-2.38-.79-4.59-2.85-6.64-6.2S6.3 8.02 7.06 5.6c.18-.58.5-1.06.92-1.43Z"
+          fill="none"
+          stroke="currentColor"
+          strokeWidth="1.4"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+        />
+      </svg>
+    );
+  }
+
   // ไอคอนแบบตัวอักษรสำหรับ JavaScript
   if (name === "javascript") {
     return <MonogramIcon className={classes} letters="JS" />;

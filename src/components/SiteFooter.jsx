@@ -1,8 +1,14 @@
 import { NavLink } from 'react-router-dom'
 import SocialLinks from './SocialLinks'
-import { brandAssets } from '../data/siteData'
+import { brandAssets, profileDetails } from '../data/siteData'
 
 function SiteFooter({ navItems, socialLinks }) {
+  const footerLinks = [
+    ...socialLinks,
+    { label: 'Email', href: `mailto:${profileDetails.email}`, icon: 'email' },
+    { label: 'Phone', href: `tel:${profileDetails.phone.replace(/-/g, '')}`, icon: 'phone' },
+  ]
+
   return (
     // Footer ใช้เมนูและ brand mark ซ้ำตามดีไซน์ต้นฉบับ
     <footer className="mt-auto border-t border-[rgba(177,156,160,0.16)] bg-[#f8e9eb]">
@@ -31,7 +37,7 @@ function SiteFooter({ navItems, socialLinks }) {
             className="w-[170px] object-contain sm:w-[210px]"
           />
         </div>
-        <SocialLinks items={socialLinks} />
+        <SocialLinks items={footerLinks} />
         <p className="m-0 text-[0.9rem] text-[#5b5056]">Copyright © 2026 Emmika Pk.</p>
       </div>
     </footer>

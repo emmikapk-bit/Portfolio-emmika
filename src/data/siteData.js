@@ -20,6 +20,15 @@ export const socialLinks = [
   },
 ];
 
+export const profileDetails = {
+  imageSrc: "/images/profile-emmika.jpg",
+  fullName: "Emmika Pannak",
+  location: "Nonthaburi, Thailand",
+  languages: ["Thai (Native)", "English (Intermediate)"],
+  email: "emmika.pk@gmail.com",
+  phone: "062-792-6223",
+};
+
 // ดอกไม้ใน Hero กำหนดตำแหน่ง ขนาด และจังหวะหมุนแยกกัน
 export const heroFlowers = [
   {
@@ -108,16 +117,20 @@ export const featuredProject = {
   name: "Readly",
   title: "Group Project in Generation Thailand",
   href: "https://group-project-03-sprint-02-chi.vercel.app/",
+  repoHref: "https://github.com/emmikapk-bit/group_project_03_sprint_02",
+  backendRepoHref:
+    "https://github.com/emmikapk-bit/group_project_03_sprint_03_backend",
   videoSrc: "/videos/group-project-preview.mov",
   description:
     "Contributed to frontend integration, authentication flow, and responsive UI refinement.",
-  tags: ["React", "Team project", "Live demo"],
+  tags: ["React", "Node.js", "Express", "PostgreSQL"],
 };
 
 export const playgroundProjects = [
   {
     title: "Cherry Blossoms",
     href: "https://cherry-blossoms-phi.vercel.app/",
+    repoHref: "https://github.com/emmikapk-bit/JSD12_week_07",
     description:
       "A visual playground piece with a soft, atmospheric front-end presentation.",
     tags: ["React", "UI study", "Live demo"],
@@ -127,6 +140,7 @@ export const playgroundProjects = [
   {
     title: "React Castle Rooms",
     href: "https://react-castle-rooms.vercel.app/",
+    repoHref: "https://github.com/emmikapk-bit/week-08-react-castle-rooms",
     description:
       "An interactive React project focused on playful layout and room-based exploration.",
     tags: ["React", "Interactive", "Live demo"],
@@ -184,6 +198,19 @@ export const skills = [
   { label: "Git & GitHub", icon: "git" },
   { label: "REST APIs & JWT Auth", icon: "api" },
   { label: "Docker", icon: "docker" },
+];
+
+export const softSkills = [
+  "Effective Communication",
+  "Analytical Thinking",
+  "Attention to Detail",
+  "Empathy for Users",
+  "Growth Mindset",
+  "Persistence",
+  "Personal Responsibility",
+  "Teamwork",
+  "Time Management",
+  "Problem-Solving",
 ];
 
 // รายการ tools และ workflow พร้อมไอคอนในหน้า About

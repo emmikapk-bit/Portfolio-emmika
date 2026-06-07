@@ -71,6 +71,15 @@ function PlaygroundPage() {
                   ))}
                 </div>
 
+                <a
+                  href={project.repoHref}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="inline-flex text-[0.92rem] font-medium text-[#8f707a] underline decoration-[#d9bec5] underline-offset-4"
+                >
+                  View source code
+                </a>
+
                 <div className="flex items-center justify-between border-t border-[#f0e4e7] pt-4">
                   <span className="text-[0.94rem] font-medium text-[#211b1f]">
                     Visit project

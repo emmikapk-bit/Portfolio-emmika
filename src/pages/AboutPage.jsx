@@ -1,21 +1,27 @@
 import FlowerSprite from "../components/FlowerSprite";
+import Icon from "../components/Icon";
 import PillCard from "../components/PillCard";
-import { brandAssets } from "../data/siteData";
-import { infoCards, skills, workflows } from "../data/siteData";
+import {
+  infoCards,
+  profileDetails,
+  skills,
+  softSkills,
+  workflows,
+} from "../data/siteData";
 
 function AboutPage() {
   return (
     // เนื้อหาหน้า About อยู่ภายใน container กลางหน้า
     <section className="mx-auto w-full max-w-[1020px] px-4 pb-[88px] pt-[34px] md:px-5">
-      {/* avatar ชั่วคราว ใช้แทนรูปจริงจนกว่าจะใส่ไฟล์โปรไฟล์ */}
+      {/* ใช้รูปโปรไฟล์จริงเพื่อให้หน้า About */}
       <div
-        className="mx-auto mb-7 grid h-[140px] w-[140px] place-items-center rounded-full border border-[rgba(135,120,125,0.12)] bg-[radial-gradient(circle_at_30%_30%,rgba(255,255,255,0.9),rgba(255,255,255,0.15)_48%),linear-gradient(145deg,#d3b3a8,#f0d6d8_54%,#f5efef)] shadow-[0_10px_30px_rgba(63,46,52,0.1)]"
+        className="mx-auto mb-7 h-[188px] w-[188px] overflow-hidden rounded-full border border-[rgba(135,120,125,0.12)] shadow-[0_10px_30px_rgba(63,46,52,0.14)]"
         aria-label="Profile portrait"
       >
         <img
-          src={brandAssets.logoMark}
-          alt=""
-          className="h-[106px] w-[106px] object-contain mb-8"
+          src={profileDetails.imageSrc}
+          alt={profileDetails.fullName}
+          className="h-full w-full object-cover"
         />
       </div>
 
@@ -39,6 +45,35 @@ function AboutPage() {
           great software is built on clean logic and relentless attention to
           detail.
         </p>
+        <p className="mt-[18px] text-[0.96rem] font-medium text-[#5b5056]">
+          {profileDetails.fullName} · {profileDetails.location}
+        </p>
+        <p className="mt-2 text-[0.95rem] text-[#5b5056]">
+          Language Skills: {profileDetails.languages.join(" · ")}
+        </p>
+        {/* วาง contact ไว้ใต้ข้อมูลหลักเพื่อให้ recruiter หาเจอง่ายที่สุด */}
+        <div className="mt-3 flex flex-wrap items-center gap-3 text-[0.95rem] text-[#5b5056]">
+          <a
+            href={`mailto:${profileDetails.email}`}
+            aria-label={`Send email to ${profileDetails.email}`}
+          >
+            <Icon
+              name="email"
+              className="inline-flex mr-2 h-[36px] w-[36px] items-center justify-center rounded-full border border-transparent text-inherit transition duration-200 hover:-translate-y-0.5 hover:border-[#e9dde0] hover:bg-[rgba(255,230,236,0.45)] focus-visible:-translate-y-0.5 focus-visible:border-[#e9dde0] focus-visible:bg-[rgba(255,230,236,0.45)] focus-visible:outline-none motion-reduce:transition-none"
+            />
+            <span>{profileDetails.email}</span>
+          </a>
+          <a
+            href={`tel:${profileDetails.phone.replace(/-/g, "")}`}
+            aria-label={`Call ${profileDetails.phone}`}
+          >
+            <Icon
+              name="phone"
+              className="inline-flex mr-2 h-[36px] w-[36px] items-center justify-center rounded-full border border-transparent text-inherit transition duration-200 hover:-translate-y-0.5 hover:border-[#e9dde0] hover:bg-[rgba(255,230,236,0.45)] focus-visible:-translate-y-0.5 focus-visible:border-[#e9dde0] focus-visible:bg-[rgba(255,230,236,0.45)] focus-visible:outline-none motion-reduce:transition-none"
+            />
+            <span>{profileDetails.phone}</span>
+          </a>
+        </div>
       </div>
 
       {/* การ์ดข้อมูล 4 ใบ พร้อมดอกไม้ที่ขยับคนละจังหวะ */}
@@ -80,6 +115,23 @@ function AboutPage() {
         <div className="flex flex-wrap gap-[14px]">
           {skills.map((skill) => (
             <PillCard key={skill.label} icon={skill.icon} label={skill.label} />
+          ))}
+        </div>
+      </section>
+
+      {/* เพิ่ม soft skills แยกต่างหากเพื่อให้ checklist อ่านเจอง่าย */}
+      <section className="mt-[66px]">
+        <h3 className="mb-6 text-[1.24rem] font-semibold text-[#211b1f]">
+          Soft Skills
+        </h3>
+        <div className="flex flex-wrap gap-[14px]">
+          {softSkills.map((skill) => (
+            <span
+              key={skill}
+              className="rounded-full border border-[#e9dde0] bg-[#fffdfd] px-4 py-2 text-[0.94rem] font-medium text-[#211b1f] shadow-[0_9px_20px_rgba(64,46,53,0.08)]"
+            >
+              {skill}
+            </span>
           ))}
         </div>
       </section>

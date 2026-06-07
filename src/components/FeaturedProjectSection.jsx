@@ -73,6 +73,25 @@ function FeaturedProjectSection({ project }) {
                     ))}
                   </div>
 
+                  <div className="flex flex-wrap gap-3 text-[0.92rem] font-medium">
+                    <a
+                      href={project.repoHref}
+                      target="_blank"
+                      rel="noreferrer"
+                      className="text-[#8f707a] underline decoration-[#d9bec5] underline-offset-4"
+                    >
+                      Frontend repo
+                    </a>
+                    <a
+                      href={project.backendRepoHref}
+                      target="_blank"
+                      rel="noreferrer"
+                      className="text-[#8f707a] underline decoration-[#d9bec5] underline-offset-4"
+                    >
+                      Backend repo
+                    </a>
+                  </div>
+
                   <div className="flex items-center justify-between border-t border-[#f0e4e7] pt-4">
                     <span className="text-[0.94rem] font-medium text-[#211b1f]">
                       View project
