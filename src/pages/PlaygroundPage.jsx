@@ -30,17 +30,25 @@ function PlaygroundPage() {
               <div
                 className={`min-h-[220px] bg-gradient-to-br ${project.accent} p-6`}
               >
-                <div className="flex h-full flex-col justify-between rounded-[24px] border border-[rgba(33,27,31,0.08)] bg-[rgba(255,255,255,0.55)] p-6 backdrop-blur-[4px]">
-                  <div className="flex items-center gap-2 mb-3">
+                <div className="flex h-full flex-col rounded-[24px] border border-[rgba(33,27,31,0.08)] bg-[rgba(255,255,255,0.55)] p-3 backdrop-blur-[4px] sm:p-4">
+                  <div className="mb-3 flex items-center gap-2">
                     <span className="h-3 w-3 rounded-full bg-[#e8b4bf]" />
                     <span className="h-3 w-3 rounded-full bg-[#f2d6a2]" />
                     <span className="h-3 w-3 rounded-full bg-[#b7d8c3]" />
                   </div>
-                  <div>
+                  <div className="overflow-hidden rounded-[18px] bg-white shadow-[0_14px_30px_rgba(64,46,53,0.12)]">
+                    <img
+                      src={project.imageSrc}
+                      alt={`${project.title} preview`}
+                      className="block aspect-[16/10] w-full object-cover object-top"
+                      loading="lazy"
+                    />
+                  </div>
+                  <div className="mt-4">
                     <p className="text-[0.78rem] uppercase tracking-[0.22em] text-[#8f707a]">
                       Live playground
                     </p>
-                    <h2 className="mt-3 text-[1.7rem] font-semibold tracking-[-0.04em] text-[#211b1f]">
+                    <h2 className="mt-2 text-[1.7rem] font-semibold tracking-[-0.04em] text-[#211b1f]">
                       {project.title}
                     </h2>
                   </div>

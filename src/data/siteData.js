@@ -118,15 +118,19 @@ export const playgroundProjects = [
   {
     title: "Cherry Blossoms",
     href: "https://cherry-blossoms-phi.vercel.app/",
-    description: "A visual playground piece with a soft, atmospheric front-end presentation.",
+    description:
+      "A visual playground piece with a soft, atmospheric front-end presentation.",
     tags: ["React", "UI study", "Live demo"],
+    imageSrc: "/images/playground/cherry-blossoms.png",
     accent: "from-[#f7d7df] via-[#fff3f5] to-[#fde6ea]",
   },
   {
     title: "React Castle Rooms",
     href: "https://react-castle-rooms.vercel.app/",
-    description: "An interactive React project focused on playful layout and room-based exploration.",
+    description:
+      "An interactive React project focused on playful layout and room-based exploration.",
     tags: ["React", "Interactive", "Live demo"],
+    imageSrc: "/images/playground/react-castle-rooms.png",
     accent: "from-[#d9e3f6] via-[#f6f8ff] to-[#e8ecfa]",
   },
 ];
