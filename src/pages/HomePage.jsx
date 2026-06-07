@@ -1,6 +1,7 @@
 import SocialLinks from '../components/SocialLinks'
+import FeaturedProjectSection from '../components/FeaturedProjectSection'
 import FlowerSprite from '../components/FlowerSprite'
-import { experiences, heroFlowers } from '../data/siteData'
+import { experiences, featuredProject, heroFlowers } from '../data/siteData'
 
 function HomePage({ socialLinks }) {
   return (
@@ -35,14 +36,7 @@ function HomePage({ socialLinks }) {
         </div>
       </section>
 
-      {/* พื้นที่สำรองสำหรับ animation project ในอนาคต */}
-      <section className="grid min-h-[300px] place-items-center bg-[#f8e9eb] sm:min-h-[420px]">
-        <div className="mx-auto w-full max-w-[1020px] px-4 text-center md:px-5">
-          <h2 className="m-0 text-[clamp(2rem,4vw,3.35rem)] font-bold tracking-[-0.04em] text-[#211b1f]">
-            animation project
-          </h2>
-        </div>
-      </section>
+      <FeaturedProjectSection project={featuredProject} />
 
       {/* ส่วนแสดงประสบการณ์งานในรูปแบบคล้าย timeline แบบเรียบง่าย */}
       <section className="mx-auto w-full max-w-[1020px] px-4 pb-[92px] pt-[78px] md:px-5">
